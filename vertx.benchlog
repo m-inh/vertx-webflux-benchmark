@@ -18,28 +18,6 @@ Requests/sec:   3299.03
 Transfer/sec:    480.03KB
 
 
-
-=========================================================
-
-
-
-wrk -t6 -c120 -d40s --latency http://150.65.114.87:8080/api/transactions
-
-Running 40s test @ http://150.65.114.87:8080/api/transactions
-  6 threads and 120 connections
-  Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    49.52ms   41.02ms 586.91ms   91.20%
-    Req/Sec   455.05    193.93     0.93k    64.19%
-  Latency Distribution
-     50%   37.60ms
-     75%   56.53ms
-     90%   85.63ms
-     99%  232.46ms
-  107358 requests in 40.11s, 15.26MB read
-Requests/sec:   2676.72
-Transfer/sec:    389.48KB
-
-
 ==========================================================
 
 wrk -t6 -c120 -d40s --latency http://150.65.114.87:8080/api/transactions
