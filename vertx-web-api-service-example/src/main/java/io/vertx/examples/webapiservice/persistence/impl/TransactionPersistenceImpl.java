@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Random;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -21,6 +22,13 @@ public class TransactionPersistenceImpl implements TransactionPersistence {
 
     public TransactionPersistenceImpl() {
         transactions = new HashMap<>();
+        Random random = new Random();
+        for (int i = 0; i < 20; i++) {
+            String id = String.valueOf(i);
+            Transaction transaction = new Transaction(id, "Message for txn " + id, "from", "to",
+                    random.nextInt(100) / 10.0);
+            transactions.put(id, transaction);
+        }
     }
 
     @Override
