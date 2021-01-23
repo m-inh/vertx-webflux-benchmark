@@ -12,6 +12,23 @@ import io.vertx.core.json.JsonObject;
 @DataObject(generateConverter = true, publicConverter = false)
 public class Transaction {
 
+  private static JsonObject toJson(Transaction transaction, JsonObject json) {
+    json.put("id", transaction.id);
+    json.put("message", transaction.message);
+    json.put("from", transaction.from);
+    json.put("to", transaction.to);
+    json.put("value", transaction.value);
+    return json;
+  }
+
+  private static void fromJson(JsonObject json, Transaction transaction) {
+    transaction.setId(json.getString("id"));
+    transaction.setMessage(json.getString("message"));
+    transaction.setFrom(json.getString("from"));
+    transaction.setTo(json.getString("to"));
+    transaction.setValue(json.getDouble("value"));
+  }
+
   private String id;
   private String message;
   private String from;
@@ -33,7 +50,7 @@ public class Transaction {
   }
 
   public Transaction(JsonObject json) {
-    TransactionConverter.fromJson(json, this);
+    Transaction.fromJson(json, this);
   }
 
   public Transaction(Transaction other) {
@@ -46,7 +63,7 @@ public class Transaction {
 
   public JsonObject toJson() {
     JsonObject json = new JsonObject();
-    TransactionConverter.toJson(this, json);
+    Transaction.toJson(this, json);
     return json;
   }
 
