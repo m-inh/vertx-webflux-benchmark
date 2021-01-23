@@ -27,7 +27,7 @@ public class TransactionPersistenceImpl implements TransactionPersistence {
     public TransactionPersistenceImpl() {
         transactions = new HashMap<>();
         Random random = new Random();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 1; i++) {
             String id = String.valueOf(i);
             Transaction transaction = new Transaction(id, "Message for txn " + id, "from", "to",
                     random.nextInt(100) / 10.0);

@@ -49,7 +49,7 @@ public class WebApiServiceExampleMainVerticle extends AbstractVerticle {
 
         // Generate the router
         Router router = routerBuilder.createRouter();
-        server = vertx.createHttpServer(new HttpServerOptions().setPort(8080).setHost("localhost")).requestHandler(router);
+        server = vertx.createHttpServer(new HttpServerOptions().setPort(8080).setHost("0.0.0.0")).requestHandler(router);
         return server.listen().mapEmpty();
       });
   }
