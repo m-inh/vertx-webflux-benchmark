@@ -1,0 +1,78 @@
+Vertx
+
+
+wrk -t6 -c120 -d40s --latency http://150.65.114.87:8080/api/transactions
+
+Running 40s test @ http://150.65.114.87:8080/api/transactions
+  6 threads and 120 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    36.86ms   16.39ms 584.19ms   81.27%
+    Req/Sec   554.22    148.73     1.00k    64.91%
+  Latency Distribution
+     50%   33.25ms
+     75%   42.59ms
+     90%   55.40ms
+     99%   99.90ms
+  132273 requests in 40.09s, 18.80MB read
+Requests/sec:   3299.03
+Transfer/sec:    480.03KB
+
+
+
+=========================================================
+
+
+
+wrk -t6 -c120 -d40s --latency http://150.65.114.87:8080/api/transactions
+
+Running 40s test @ http://150.65.114.87:8080/api/transactions
+  6 threads and 120 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    49.52ms   41.02ms 586.91ms   91.20%
+    Req/Sec   455.05    193.93     0.93k    64.19%
+  Latency Distribution
+     50%   37.60ms
+     75%   56.53ms
+     90%   85.63ms
+     99%  232.46ms
+  107358 requests in 40.11s, 15.26MB read
+Requests/sec:   2676.72
+Transfer/sec:    389.48KB
+
+
+==========================================================
+
+wrk -t6 -c120 -d40s --latency http://150.65.114.87:8080/api/transactions
+
+Running 40s test @ http://150.65.114.87:8080/api/transactions
+  6 threads and 120 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    36.64ms   19.33ms 247.78ms   86.17%
+    Req/Sec   567.92    165.99     0.99k    62.64%
+  Latency Distribution
+     50%   31.98ms
+     75%   41.20ms
+     90%   56.47ms
+     99%  117.24ms
+  135383 requests in 40.08s, 19.24MB read
+Requests/sec:   3378.04
+Transfer/sec:    491.53KB
+
+==============================================
+
+
+wrk -t6 -c120 -d40s --latency http://150.65.114.87:8080/api/transactions
+
+Running 40s test @ http://150.65.114.87:8080/api/transactions
+  6 threads and 120 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    38.20ms   16.80ms 156.53ms   76.85%
+    Req/Sec   532.37    154.78     0.95k    71.95%
+  Latency Distribution
+     50%   34.16ms
+     75%   44.87ms
+     90%   60.21ms
+     99%   99.19ms
+  127262 requests in 40.11s, 18.08MB read
+Requests/sec:   3172.94
+Transfer/sec:    461.69KB

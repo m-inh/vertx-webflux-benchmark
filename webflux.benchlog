@@ -1,0 +1,38 @@
+WebFlux
+
+
+wrk -t6 -c120 -d40s --latency http://150.65.114.87:8080/api/transactions
+
+Running 40s test @ http://150.65.114.87:8080/api/transactions
+  6 threads and 120 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    55.76ms   17.00ms 485.04ms   80.85%
+    Req/Sec   362.00     71.35   600.00     74.59%
+  Latency Distribution
+     50%   54.38ms
+     75%   63.37ms
+     90%   72.28ms
+     99%  100.46ms
+  86345 requests in 40.10s, 20.17MB read
+Requests/sec:   2153.19
+Transfer/sec:    515.17KB
+
+=====================================================
+
+
+
+wrk -t6 -c120 -d40s --latency http://150.65.114.87:8080/api/transactions
+
+Running 40s test @ http://150.65.114.87:8080/api/transactions
+  6 threads and 120 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    59.05ms   20.13ms 611.40ms   84.62%
+    Req/Sec   343.75     72.97   600.00     75.53%
+  Latency Distribution
+     50%   56.06ms
+     75%   65.00ms
+     90%   77.57ms
+     99%  127.16ms
+  82064 requests in 40.09s, 13.15MB read
+Requests/sec:   2046.93
+Transfer/sec:    335.83KB
