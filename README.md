@@ -1,4 +1,4 @@
-# java-vertx-reactor
+# Benchmark Vertx & WebFlux
 
 - Intel(R) Core(TM) i7-9700K CPU @ 3.60GHz
 - CentOS 7
